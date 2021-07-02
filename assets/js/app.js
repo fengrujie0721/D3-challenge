@@ -38,7 +38,7 @@ var chosenYAxis="obesity";
 function yScale(data,chosenYAxis){
     var yLinearScale=d3.scaleLinear()
     .domain([d3.min(data,d=>d[chosenYAxis])*0.8,
-      d3.max(data,d=>d[chosenYAxis])*1.2])
+      d3.max(data,d=>d[chosenYAxis])*1.1])
       .range([height,0]);
       return yLinearScale;
 }
@@ -56,7 +56,7 @@ function renderAxes(newXScale,xAxis){
 function renderAxes2(newYScale,yAxis)   { 
     var leftAxis=d3.axisLeft(newYScale);
     yAxis.transition()
-    .duration(10)
+    .duration(1000)
     .call(leftAxis);
     
     
