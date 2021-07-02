@@ -156,24 +156,13 @@ function updateToolTip(chosenXAxis,chosenYAxis,circlesGroup){
         toolTip.hide(data);
     });
     
-    return circlesGroup;
+    return circlesGroup;}
     
-}
-function updateText(newXScale,newYScale,chosenXAxis,chosenYAxis,textGroup){
-    
-    var toolTip2=d3.tip()
-    .attr("class","tooltip")
-    .attr("x",d=>newXScale(d[chosenXAxis]))
-    .attr("y",d=>newYScale(d[chosenYAxis]))
-    .html(function(d){return (`${d.abbr}`)});
-    chartGroup.call(toolTip2);
-    textGroup.on("mouseover",function(data){toolTip2.show(data);})
-    .on("mouseout",function(data){toolTip2.show(data);});
-    return textGroup;
-}
 
+// retrieve data from csv file and execute everything
 d3.csv("assets/data/data.csv").then(function(data,err){
     if(err) throw err;
+    // parse data
     data.forEach(function(data){
         data.poverty= +data.poverty;
         data.obesity= +data.obesity;
@@ -183,7 +172,9 @@ d3.csv("assets/data/data.csv").then(function(data,err){
         data.smokes= +data.smokes;
         console.log(data.abbr);
     });
+    // create x scale
     var xLinearScale=xScale(data,chosenXAxis);
+    // create y scale
     var yLinearScale=yScale(data,chosenYAxis);
     var bottomAxis=d3.axisBottom(xLinearScale);
     var leftAxis=d3.axisLeft(yLinearScale);
