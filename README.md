@@ -14,11 +14,15 @@ Create and situate your axes and labels to the left and bottom of the chart.
 
 Healthcare vs. Poverty
 
-![image](https://user-images.githubusercontent.com/79819331/124316850-3b0e8b00-db44-11eb-9dd0-a3d727070ba5.png)
+![image](https://user-images.githubusercontent.com/79819331/124317573-62198c80-db45-11eb-9dcb-b88907e38bca.png)
+
 
 Smokes vs. Age
 
+Enter tooltips: developers can implement these in their D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. Add tooltips to circles and display each tooltip with the data that the user has selected. 
 
+
+![image](https://user-images.githubusercontent.com/79819331/124316850-3b0e8b00-db44-11eb-9dd0-a3d727070ba5.png)
 
 
 
