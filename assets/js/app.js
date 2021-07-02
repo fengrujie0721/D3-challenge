@@ -186,8 +186,8 @@ d3.csv("assets/data/data.csv").then(function(data,err){
     .attr("cx",d=>xLinearScale(d[chosenXAxis]))
     .attr("cy",d=>yLinearScale(d[chosenYAxis]))
     .attr("r","20")
-    .attr("fill","blue")
-    .attr("opacity","0.5");
+    .attr("fill","lightblue")
+    .attr("opacity","1.0");
        
     //append initial text    
     var textGroup=chartGroup.selectAll()
