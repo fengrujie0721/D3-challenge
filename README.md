@@ -3,6 +3,13 @@ Analyze the current trends shaping people's lives, as well as creating charts, g
 
 Create a scatter plot between two of the data variables such as Healthcare vs. Poverty or Smokers vs. Age.
 
+Include state abbreviations in the circles.
+
+
+Create and situate your axes and labels to the left and bottom of the chart.
+
+
+
 ![image](https://user-images.githubusercontent.com/79819331/124316741-11edfa80-db44-11eb-8955-60474248c622.png)
 
 Healthcare vs. Poverty
