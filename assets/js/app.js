@@ -176,17 +176,19 @@ d3.csv("assets/data/data.csv").then(function(data,err){
     var xLinearScale=xScale(data,chosenXAxis);
     // create y scale
     var yLinearScale=yScale(data,chosenYAxis);
+    // create bottom axis
     var bottomAxis=d3.axisBottom(xLinearScale);
+    // create left axis
     var leftAxis=d3.axisLeft(yLinearScale);
-
+    //append x axis 
     var xAxis=chartGroup.append("g")
     .classed("x-axis",true)
     .attr("transform",`translate(0, ${height})`)
     .call(bottomAxis);
-
+    // append y axis
     var yAxis=chartGroup.append("g")
          .call(leftAxis);
-
+    // append initial circles
     var circlesGroup=chartGroup.selectAll("circle")
     .data(data)
     .enter()
@@ -196,15 +198,8 @@ d3.csv("assets/data/data.csv").then(function(data,err){
     .attr("r","20")
     .attr("fill","blue")
     .attr("opacity","0.5");
-    
-
-    
-  
-    
        
-    
-    
-   
+    //append initial text    
     var textGroup=chartGroup.selectAll()
     .data(data)
     .enter()
@@ -217,7 +212,7 @@ d3.csv("assets/data/data.csv").then(function(data,err){
     .html(function(d){return (d.abbr);});
 
 
-
+    // create group for xaxis label and yaxis label
     var xlabelsGroup=chartGroup.append("g")
     var ylabelsGroup=chartGroup.append("g")
 
@@ -270,9 +265,9 @@ d3.csv("assets/data/data.csv").then(function(data,err){
     .attr("value","healthcare")
     .classed("inactive",true)
     .text("Lacks Healthcare(%)");
-
+    // update tooltip function above csv import
     var circlesGroup=updateToolTip(chosenXAxis,chosenYAxis,circlesGroup,textGroup);
-
+    // x axis labels event listener
     xlabelsGroup.selectAll("text")
     .on("click",function(){
         var value=d3.select(this).attr("value");
@@ -477,6 +472,7 @@ d3.csv("assets/data/data.csv").then(function(data,err){
 
             }
         });
+        // y axis labels event listener
         ylabelsGroup.selectAll("text")
         .on("click",function(){
             var value=d3.select(this).attr("value");
