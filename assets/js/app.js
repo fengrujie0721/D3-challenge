@@ -95,43 +95,33 @@ function renderCircles(circlesGroup,newXScale,chosenXAxis,newYScale,chosenYAxis)
 function updateToolTip(chosenXAxis,chosenYAxis,circlesGroup){
     var xlabel;
     var ylabel;
-    if(chosenXAxis==="poverty"&&chosenYAxis==="obesity"){
+    if(chosenXAxis==="poverty"){
         xlabel="Poverty: ";
-        ylabel="Obesity: ";
+        
     }
-    else if(chosenXAxis==="age"&&chosenYAxis==="obesity"){
+    else if(chosenXAxis==="age"){
         xlabel="Age: ";
-        ylabel="Obesity: ";
+        
 
-    }
-    else if(chosenXAxis==="income"&&chosenYAxis==="obesity"){
-        xlabel="Income: ";
-        ylabel="Obesity: ";
-
-    }
-    else if(chosenXAxis==="poverty"&&chosenYAxis==="smokes"){
-        xlabel="Poverty: ";
-        ylabel="Smoke: ";
-    }
-    else if(chosenXAxis==="age"&&chosenYAxis==="smokes"){
-        xlabel="Age: ";
-        ylabel="Smoke: ";
-    }
-    else if(chosenXAxis==="income"&&chosenYAxis==="smokes"){
-        xlabel="Income: ";
-        ylabel="Smoke: ";
-    }
-    else if(chosenXAxis==="poverty"&&chosenYAxis==="healthcare"){
-        xlabel="Poverty: ";
-        ylabel="Lacks Healthcare: ";
-    }
-    else if(chosenXAxis==="income"&&chosenYAxis==="healthcare"){
-        xlabel="Income: ";
-        ylabel="Lacks Healthcare: ";
     }
     else {
-        xlabel="Age: ";
+        xlabel="Income: ";
+        
+
+    }
+    if(chosenYAxis==="smokes"){
+        
+        ylabel="Smoke: ";
+    }
+   
+    else if(chosenYAxis==="healthcare"){
+        
         ylabel="Lacks Healthcare: ";
+    }
+   
+    else {
+        
+        ylabel="Obesity: ";
     }
     var percent="%";
     var toolTip=d3.tip()
