@@ -27,5 +27,11 @@ Enter tooltips: developers can implement these in their D3 graphics to reveal a 
 
 Place additional labels in scatter plot and give them click events so that users can decide which data to display. 
 
+![image](https://user-images.githubusercontent.com/79819331/124317738-a73dbe80-db45-11eb-9048-acbbaee05aa4.png)
+
+
+![image](https://user-images.githubusercontent.com/79819331/124317779-b58bda80-db45-11eb-9b9c-58ce8937b011.png)
+
+
 
 
