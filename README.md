@@ -25,4 +25,7 @@ Enter tooltips: developers can implement these in their D3 graphics to reveal a 
 ![image](https://user-images.githubusercontent.com/79819331/124316850-3b0e8b00-db44-11eb-9dd0-a3d727070ba5.png)
 
 
+Place additional labels in scatter plot and give them click events so that users can decide which data to display. 
+
+
 
