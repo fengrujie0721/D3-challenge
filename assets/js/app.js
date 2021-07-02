@@ -272,7 +272,7 @@ d3.csv("assets/data/data.csv").then(function(data,err){
             
             circlesGroup=renderCircles(circlesGroup,xLinearScale,chosenXAxis,yLinearScale,chosenYAxis);
             circlesGroup=updateToolTip(chosenXAxis,chosenYAxis,circlesGroup,textGroup);
-            if(chosenXAxis==="poverty"&&chosenYAxis==="obesity"){
+            if(chosenXAxis==="poverty"){
                 povertylabel
                 .classed("active",true)
                 .classed("inactive",false);
@@ -282,19 +282,10 @@ d3.csv("assets/data/data.csv").then(function(data,err){
                 incomelabel
                 .classed("active",false)
                 .classed("inactive",true);
-                obesitylabel
-                .classed("active",true)
-                .classed("inactive",false);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                
+                              
 
             }
-            else if(chosenXAxis==="age"&&chosenYAxis==="obesity"){
+            else if(chosenXAxis==="age"){
                 agelabel
                 .classed("active",true)
                 .classed("inactive",false);
@@ -304,161 +295,23 @@ d3.csv("assets/data/data.csv").then(function(data,err){
                 incomelabel
                 .classed("active",false)
                 .classed("inactive",true);
-                obesitylabel
-                .classed("active",true)
-                .classed("inactive",false);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                
+                               
             }
 
-            else if(chosenXAxis==="income"&&chosenYAxis==="obesity"){
-                incomelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                povertylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                agelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                obesitylabel
-                .classed("active",true)
-                .classed("inactive",false);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                
-            }
-            else if(chosenXAxis==="age"&&chosenYAxis==="smokes"){
-                agelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                povertylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                incomelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                smokeslabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-               
-            }
-            else if(chosenXAxis==="income"&&chosenYAxis==="smokes"){
-                incomelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                povertylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                agelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                smokeslabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                
-            }
-            else if(chosenXAxis==="poverty"&&chosenYAxis==="smokes"){
-                povertylabel
-                .classed("active",true)
-                .classed("inactive",false);
-                incomelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                agelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                smokeslabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",false)
-                .classed("inactive",true);
-            }
-            else if(chosenXAxis==="poverty"&&chosenYAxis==="healthcare"){
-                povertylabel
-                .classed("active",true)
-                .classed("inactive",false);
-                incomelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                agelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
-            }
-            else if(chosenXAxis==="age"&&chosenYAxis==="healthcare"){
-                agelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                incomelabel
-                .classed("active",false)
-                .classed("inactive",true);
-                povertylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                healthcarelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
-                .classed("active",false)
-                .classed("inactive",true);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
-            }
             else {
                 incomelabel
                 .classed("active",true)
                 .classed("inactive",false);
-                agelabel
-                .classed("active",false)
-                .classed("inactive",true);
                 povertylabel
                 .classed("active",false)
                 .classed("inactive",true);
-                healthcarelabel
-                .classed("active",true)
-                .classed("inactive",false);
-                obesitylabel
+                agelabel
                 .classed("active",false)
                 .classed("inactive",true);
-                smokeslabel
-                .classed("active",false)
-                .classed("inactive",true);
+                
             }
+            
+           
 
             }
         });
@@ -477,16 +330,8 @@ d3.csv("assets/data/data.csv").then(function(data,err){
                 yAxis=renderAxes2(yLinearScale,yAxis);
                 circlesGroup=renderCircles(circlesGroup,xLinearScale,chosenXAxis,yLinearScale,chosenYAxis,textGroup);
                 circlesGroup=updateToolTip(chosenXAxis,chosenYAxis,circlesGroup,textGroup);
-                if(chosenXAxis==="poverty"&&chosenYAxis==="obesity"){
-                    povertylabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
+                if(chosenYAxis==="obesity"){
+                    
                     obesitylabel
                     .classed("active",true)
                     .classed("inactive",false);
@@ -498,57 +343,10 @@ d3.csv("assets/data/data.csv").then(function(data,err){
                     .classed("inactive",true);
     
                 }
-                else if(chosenXAxis==="age"&&chosenYAxis==="obesity"){
-                    agelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    obesitylabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    smokeslabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
+                
+                
+                else if(chosenYAxis==="smokes"){
                     
-                }
-                else if(chosenXAxis==="income"&&chosenYAxis==="obesity"){
-                    incomelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    obesitylabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    smokeslabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                }
-                else if(chosenXAxis==="age"&&chosenYAxis==="smokes"){
-                    agelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
                     smokeslabel
                     .classed("active",true)
                     .classed("inactive",false);
@@ -560,98 +358,12 @@ d3.csv("assets/data/data.csv").then(function(data,err){
                     .classed("inactive",true);
                     
                 }
-                else if(chosenXAxis==="income"&&chosenYAxis==="smokes"){
-                    incomelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    smokeslabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    obesitylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    
-                }
-                else if(chosenXAxis==="poverty"&&chosenYAxis==="smokes"){
-                    povertylabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    smokeslabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    obesitylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    
-                }
-                else if(chosenXAxis==="poverty"&&chosenYAxis==="healthcare"){
-                    povertylabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    obesitylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    smokeslabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                }
-                else if(chosenXAxis==="age"&&chosenYAxis==="healthcare"){
-                    agelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    incomelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    healthcarelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    obesitylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    smokeslabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                }
+                
+                
+                
+               
                 else {
-                    incomelabel
-                    .classed("active",true)
-                    .classed("inactive",false);
-                    agelabel
-                    .classed("active",false)
-                    .classed("inactive",true);
-                    povertylabel
-                    .classed("active",false)
-                    .classed("inactive",true);
+                   
                     healthcarelabel
                     .classed("active",true)
                     .classed("inactive",false);
